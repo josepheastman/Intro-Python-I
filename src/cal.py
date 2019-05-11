@@ -22,3 +22,31 @@ and does the following:
 import sys
 import calendar
 from datetime import datetime
+
+
+month_input = input('Month: ')
+year_input = input('Year: ')
+month = datetime.today().strftime('%m')
+year = datetime.today().strftime('%Y')
+
+if month_input == "" and year_input == "":
+    month
+    year
+    print(calendar.month(int(year_input), int(month_input)))
+elif year_input == "" and month_input != None:
+    if month_input.isdigit():
+        year
+        print(calendar.month(int(year_input), int(month_input)))
+    else:
+        print('Please input a number for the month.')
+elif month_input == "" and year_input != None:
+    if year_input.isdigit():
+        month
+        print(calendar.month(int(year_input), int(month_input)))
+    else:
+        print('Please input a number for the year.')
+else:
+    if month_input.isdigit() and year_input.isdigit():
+        print(calendar.month(int(year_input), int(month_input)))
+    else:
+        print('Please input numbers for the month and year.')

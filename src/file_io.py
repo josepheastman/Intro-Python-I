@@ -9,7 +9,7 @@ https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files
 # Print all the contents of the file, then close the file
 
 # YOUR CODE HERE
-f = open('foo.txt', 'r')
+f = open("foo.txt", "r")
 
 file_contents = f.read()
 
@@ -25,8 +25,8 @@ f.close()
 # YOUR CODE HERE
 f = open("bar.txt", "w")
 
-f.write('arbitrary content 1')
-f.write('arbitrary content 2')
-f.write('arbitrary content 3')
+f.write("arbitrary content line 1")
+f.write("arbitrary content line 2")
+f.write("arbitrary content line 3")
 
 f.close()

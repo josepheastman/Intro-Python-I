@@ -24,27 +24,29 @@ import calendar
 from datetime import datetime
 
 
-month = input("Select a month: ")
-year = input("What year is it: ")
+month_input = input('Month: ')
+year_input = input('Year: ')
+month = datetime.today().strftime('%m')
+year = datetime.today().strftime('%Y')
 
-if month == "" and year == "":
-    month = datetime.today().strftime('%m')
-    year = datetime.today().strftime('%Y')
-    print(calendar.month(int(year), int(month)))
-elif year == "" and month != None:
-    if month.isdigit():
-        year = datetime.today().strftime('%Y')
-        print(calendar.month(int(year), int(month)))
+if month_input == "" and year_input == "":
+    month
+    year
+    print(calendar.month(int(year_input), int(month_input)))
+elif year_input == "" and month_input != None:
+    if month_input.isdigit():
+        year
+        print(calendar.month(int(year_input), int(month_input)))
     else:
-        print('Month should be a number.')
-elif month == "" and year != None:
-    if year.isdigit():
-        month = datetime.today().strftime('%m')
-        print(calendar.month(int(year), int(month)))
+        print('Please input a number for the month.')
+elif month_input == "" and year_input != None:
+    if year_input.isdigit():
+        month
+        print(calendar.month(int(year_input), int(month_input)))
     else:
-        print('Year should be a number.')
+        print('Please input a number for the year.')
 else:
-    if month.isdigit() and year.isdigit():
-        print(calendar.month(int(year), int(month)))
+    if month_input.isdigit() and year_input.isdigit():
+        print(calendar.month(int(year_input), int(month_input)))
     else:
-        print('Month and Year should be Numbers.')
+        print('Please input numbers for the month and year.')
